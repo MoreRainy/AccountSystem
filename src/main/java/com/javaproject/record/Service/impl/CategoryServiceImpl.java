@@ -1,0 +1,30 @@
+package com.javaproject.record.Service.impl;
+
+import com.javaproject.record.Entity.Category;
+import com.javaproject.record.Mapper.CategoryMapper;
+import com.javaproject.record.Service.CategoryService;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+
+@Service
+@Slf4j
+public class CategoryServiceImpl implements CategoryService {
+    @Autowired
+    private CategoryMapper categoryMapper;
+
+    /**
+     * 根据用户获取分类信息
+     *
+     * @param userId
+     * @return
+     */
+    @Override
+    public ArrayList<Category> getCategoryByUserId(int userId) {
+        ArrayList<Category> categoryArrayList = categoryMapper.getCategoryByUserId(userId);
+
+        return categoryArrayList;
+    }
+}
