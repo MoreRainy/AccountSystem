@@ -10,4 +10,6 @@ public interface AccountBookService {
     void deleteAccountBookById(int bookId);
 
     void addAccountBook(AccountBook accountBook);
+
+    void updateAccountBook(AccountBook accountBook);
 }

@@ -1,10 +1,7 @@
 package com.javaproject.record.Mapper;
 
 import com.javaproject.record.Entity.Transaction;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.ArrayList;
 
@@ -35,4 +32,11 @@ public interface TransactionMapper {
      */
     @Insert("insert into transaction (user_id, book_id, category_id, amount, note) VALUES (#{userId}, #{bookId}, #{categoryId}, #{amount}, #{note})")
     void addTransaction(Transaction transaction);
+
+    /**
+     * 修改交易记录
+     *
+     * @param transaction
+     */
+    void updateTransaction(Transaction transaction);
 }

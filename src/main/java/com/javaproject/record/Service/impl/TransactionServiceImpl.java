@@ -47,4 +47,16 @@ public class TransactionServiceImpl implements TransactionService {
     public void addTransaction(Transaction transaction) {
         transactionMapper.addTransaction(transaction);
     }
+
+    /**
+     * 修改交易记录
+     *
+     * @param transaction
+     */
+    @Override
+    public void updateTransaction(Transaction transaction) {
+        log.info("修改交易记录:{}",transaction);
+
+        transactionMapper.updateTransaction(transaction);
+    }
 }

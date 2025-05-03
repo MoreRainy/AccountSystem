@@ -32,4 +32,12 @@ public interface CategoryMapper {
      */
     @Insert("insert into category (category_name, category_type, user_id) values (#{categoryName}, #{categoryType}, #{userId})")
     void addCategory(Category category);
+
+    /**
+     * 修改分类
+     *
+     * @param category
+     */
+    void updateCategory(Category category);
+
 }

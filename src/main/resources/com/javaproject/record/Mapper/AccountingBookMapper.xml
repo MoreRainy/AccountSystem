@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.javaproject.record.Mapper.AccountingBookMapper">
+    <update id="updateAccountBook">
+        update account_book
+        <set>
+            <if test="userId != null">
+                user_id = #{userId},
+            </if>
+            <if test="bookName != null">
+                book_Name = #{bookName},
+            </if>
+            <if test="description != null">
+                description = #{description}
+            </if>
+        </set>
+        where book_id = #{bookId}
+    </update>
+</mapper>

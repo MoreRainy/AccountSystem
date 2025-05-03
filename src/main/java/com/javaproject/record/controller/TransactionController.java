@@ -52,4 +52,17 @@ public class TransactionController {
 
         return Result.success();
     }
+
+    /**
+     * 修改交易记录
+     *
+     * @param transaction
+     * @return
+     */
+    @PutMapping("/update")
+    public Result updateTransaction(@RequestBody Transaction transaction){
+        transactionService.updateTransaction(transaction);
+
+        return Result.success();
+    }
 }

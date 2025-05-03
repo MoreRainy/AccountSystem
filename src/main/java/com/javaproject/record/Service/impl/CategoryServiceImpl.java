@@ -48,4 +48,14 @@ public class CategoryServiceImpl implements CategoryService {
     public void addCategory(Category category) {
         categoryMapper.addCategory(category);
     }
+
+    /**
+     * 修改分类
+     *
+     * @param category
+     */
+    @Override
+    public void updateCategory(Category category) {
+        categoryMapper.updateCategory(category);
+    }
 }

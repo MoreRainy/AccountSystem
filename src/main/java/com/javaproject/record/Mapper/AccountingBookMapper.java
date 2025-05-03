@@ -34,4 +34,11 @@ public interface AccountingBookMapper {
      */
     @Insert("INSERT INTO account_book (user_id, book_name, description) values (#{userId}, #{bookName}, #{description})")
     void addAccountBook(AccountBook accountBook);
+
+    /**
+     * 修改账本
+     *
+     * @param accountBook
+     */
+    void updateAccountBook(AccountBook accountBook);
 }

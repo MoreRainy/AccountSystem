@@ -52,4 +52,17 @@ public class AccountBookController {
 
         return Result.success();
     }
+
+    /**
+     * 修改账本
+     *
+     * @param accountBook
+     * @return
+     */
+    @PutMapping("/update")
+    public Result updateAccountBook(@RequestBody AccountBook accountBook){
+        accountBookService.updateAccountBook(accountBook);
+
+        return Result.success();
+    }
 }

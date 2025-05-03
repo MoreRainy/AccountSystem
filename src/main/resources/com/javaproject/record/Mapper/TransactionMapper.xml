@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.javaproject.record.Mapper.TransactionMapper">
+    <update id="updateTransaction">
+        update transaction
+        <set>
+            <if test="userId != null">
+                user_id = #{userId},
+            </if>
+            <if test="bookId != null">
+                book_id = #{bookId},
+            </if>
+            <if test="categoryId != null">
+                category_id = #{categoryId},
+            </if>
+            <if test="amount != null">
+                amount = #{amount},
+            </if>
+            <if test="note != null">
+                note = #{note}
+            </if>
+        </set>
+        where transaction_id = #{transactionId}
+    </update>
+</mapper>

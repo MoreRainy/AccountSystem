@@ -52,4 +52,17 @@ public class CategoryController {
 
         return Result.success();
     }
+
+    /**
+     * 修改分类
+     *
+     * @param category
+     * @return
+     */
+    @PutMapping("/update")
+    public Result updateCategory(@RequestBody Category category){
+        categoryService.updateCategory(category);
+
+        return Result.success();
+    }
 }

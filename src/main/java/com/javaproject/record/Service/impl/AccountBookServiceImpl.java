@@ -48,4 +48,14 @@ public class AccountBookServiceImpl implements AccountBookService {
     public void addAccountBook(AccountBook accountBook) {
         accountingBookMapper.addAccountBook(accountBook);
     }
+
+    /**
+     * 修改账本
+     *
+     * @param accountBook
+     */
+    @Override
+    public void updateAccountBook(AccountBook accountBook) {
+        accountingBookMapper.updateAccountBook(accountBook);
+    }
 }
