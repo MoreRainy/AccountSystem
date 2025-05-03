@@ -37,4 +37,15 @@ public class CategoryServiceImpl implements CategoryService {
     public void deleteCategoryById(int categoryId) {
         categoryMapper.deleteCategoryById(categoryId);
     }
+
+    /**
+     * 新增分类
+     *
+     * @param category
+     * @return
+     */
+    @Override
+    public void addCategory(Category category) {
+        categoryMapper.addCategory(category);
+    }
 }

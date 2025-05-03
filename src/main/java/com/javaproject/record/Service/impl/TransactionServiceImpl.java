@@ -37,4 +37,14 @@ public class TransactionServiceImpl implements TransactionService {
     public void deleteTransactionById(int transactionId) {
         transactionMapper.deleteTransactionById(transactionId);
     }
+
+    /**
+     * 新增交易记录
+     *
+     * @param transaction
+     */
+    @Override
+    public void addTransaction(Transaction transaction) {
+        transactionMapper.addTransaction(transaction);
+    }
 }

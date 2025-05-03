@@ -39,4 +39,17 @@ public class AccountBookController {
 
         return Result.success();
     }
+
+    /**
+     * 新增账本
+     *
+     * @param accountBook
+     * @return
+     */
+    @PostMapping("/add")
+    public Result addAccountBook(@RequestBody AccountBook accountBook){
+        accountBookService.addAccountBook(accountBook);
+
+        return Result.success();
+    }
 }

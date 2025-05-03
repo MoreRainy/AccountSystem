@@ -38,4 +38,14 @@ public class AccountBookServiceImpl implements AccountBookService {
     public void deleteAccountBookById(int bookId) {
         accountingBookMapper.deleteAccountBookById(bookId);
     }
+
+    /**
+     * 新增账本
+     *
+     * @param accountBook
+     */
+    @Override
+    public void addAccountBook(AccountBook accountBook) {
+        accountingBookMapper.addAccountBook(accountBook);
+    }
 }

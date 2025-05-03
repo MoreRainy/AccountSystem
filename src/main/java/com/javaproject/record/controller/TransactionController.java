@@ -39,4 +39,17 @@ public class TransactionController {
 
         return Result.success();
     }
+
+    /**
+     * 新增交易记录
+     *
+     * @param transaction
+     * @return
+     */
+    @PostMapping("/add")
+    public Result addTransaction(@RequestBody Transaction transaction){
+        transactionService.addTransaction(transaction);
+
+        return Result.success();
+    }
 }

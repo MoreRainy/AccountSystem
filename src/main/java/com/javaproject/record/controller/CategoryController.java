@@ -39,4 +39,17 @@ public class CategoryController {
 
         return Result.success();
     }
+
+    /**
+     * 新增分类
+     *
+     * @param category
+     * @return
+     */
+    @PostMapping("/add")
+    public Result addCategory(@RequestBody Category category){
+        categoryService.addCategory(category);
+
+        return Result.success();
+    }
 }

@@ -8,4 +8,6 @@ public interface CategoryService {
     ArrayList<Category> getCategoryByUserId(int userId);
 
     void deleteCategoryById(int categoryId);
+
+    void addCategory(Category category);
 }

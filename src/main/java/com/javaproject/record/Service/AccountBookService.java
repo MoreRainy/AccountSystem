@@ -8,4 +8,6 @@ public interface AccountBookService {
     ArrayList<AccountBook> getAccountBookByUserId(int userId);
 
     void deleteAccountBookById(int bookId);
+
+    void addAccountBook(AccountBook accountBook);
 }

@@ -8,4 +8,6 @@ public interface TransactionService {
     ArrayList<Transaction> getTransactionByUserId(int userId);
 
     void deleteTransactionById(int transactionId);
+
+    void addTransaction(Transaction transaction);
 }

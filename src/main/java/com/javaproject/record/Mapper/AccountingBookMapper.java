@@ -2,6 +2,7 @@ package com.javaproject.record.Mapper;
 
 import com.javaproject.record.Entity.AccountBook;
 import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -25,4 +26,12 @@ public interface AccountingBookMapper {
      */
     @Delete("delete from account_book where book_id = #{bookId}")
     void deleteAccountBookById(int bookId);
+
+    /**
+     * 新增账本
+     *
+     * @param accountBook
+     */
+    @Insert("INSERT INTO account_book (user_id, book_name, description) values (#{userId}, #{bookName}, #{description})")
+    void addAccountBook(AccountBook accountBook);
 }
