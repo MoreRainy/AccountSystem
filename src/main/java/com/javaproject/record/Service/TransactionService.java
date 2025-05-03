@@ -6,4 +6,6 @@ import java.util.ArrayList;
 
 public interface TransactionService {
     ArrayList<Transaction> getTransactionByUserId(int userId);
+
+    void deleteTransactionById(int transactionId);
 }

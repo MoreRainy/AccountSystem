@@ -27,4 +27,15 @@ public class AccountBookServiceImpl implements AccountBookService {
 
         return accountBookArrayList;
     }
+
+    /**
+     * 根据账本Id单次删除
+     *
+     * @param bookId
+     * @return
+     */
+    @Override
+    public void deleteAccountBookById(int bookId) {
+        accountingBookMapper.deleteAccountBookById(bookId);
+    }
 }

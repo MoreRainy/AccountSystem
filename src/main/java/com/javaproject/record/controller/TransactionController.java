@@ -4,9 +4,7 @@ import com.javaproject.record.Entity.Transaction;
 import com.javaproject.record.Result.Result;
 import com.javaproject.record.Service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -29,4 +27,16 @@ public class TransactionController {
         return Result.success(transactionArrayList);
     }
 
+    /**
+     * 根据记录Id删除交易记录
+     *
+     * @param transactionId
+     * @return
+     */
+    @DeleteMapping("/delete/{transactionId}")
+    public Result deleteTransactionById(@PathVariable int transactionId){
+        transactionService.deleteTransactionById(transactionId);
+
+        return Result.success();
+    }
 }

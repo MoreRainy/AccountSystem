@@ -4,9 +4,7 @@ import com.javaproject.record.Entity.Category;
 import com.javaproject.record.Result.Result;
 import com.javaproject.record.Service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -27,5 +25,18 @@ public class CategoryController {
         ArrayList<Category> categoryArrayList = categoryService.getCategoryByUserId(userId);
 
         return Result.success(categoryArrayList);
+    }
+
+    /**
+     * 根据分类id删除分类
+     *
+     * @param categoryId
+     * @return
+     */
+    @DeleteMapping("/delete/{categoryId}")
+    public Result deleteCategoryById(@PathVariable int categoryId){
+        categoryService.deleteCategoryById(categoryId);
+
+        return Result.success();
     }
 }

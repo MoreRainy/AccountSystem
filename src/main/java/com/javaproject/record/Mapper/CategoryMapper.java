@@ -1,6 +1,7 @@
 package com.javaproject.record.Mapper;
 
 import com.javaproject.record.Entity.Category;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -16,4 +17,12 @@ public interface CategoryMapper {
      */
     @Select("select * from category where user_id = #{userId}")
     ArrayList<Category> getCategoryByUserId(int userId);
+
+    /**
+     * 根据分类id删除分类
+     *
+     * @param categoryId
+     */
+    @Delete("delete from category where category_id = #{categoryId}")
+    void deleteCategoryById(int categoryId);
 }

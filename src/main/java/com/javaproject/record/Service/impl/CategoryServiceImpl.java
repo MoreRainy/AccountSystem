@@ -27,4 +27,14 @@ public class CategoryServiceImpl implements CategoryService {
 
         return categoryArrayList;
     }
+
+    /**
+     * 根据分类id删除分类
+     *
+     * @param categoryId
+     */
+    @Override
+    public void deleteCategoryById(int categoryId) {
+        categoryMapper.deleteCategoryById(categoryId);
+    }
 }

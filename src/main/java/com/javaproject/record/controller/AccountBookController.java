@@ -4,9 +4,7 @@ import com.javaproject.record.Entity.AccountBook;
 import com.javaproject.record.Result.Result;
 import com.javaproject.record.Service.AccountBookService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -27,5 +25,18 @@ public class AccountBookController {
         ArrayList<AccountBook> accountBookArrayList = accountBookService.getAccountBookByUserId(userId);
 
         return Result.success(accountBookArrayList);
+    }
+
+    /**
+     * 根据账本Id单次删除
+     *
+     * @param bookId
+     * @return
+     */
+    @DeleteMapping("/delete/{bookId}")
+    public Result deleteAccountBookById(@PathVariable("bookId") int bookId){
+        accountBookService.deleteAccountBookById(bookId);
+
+        return Result.success();
     }
 }

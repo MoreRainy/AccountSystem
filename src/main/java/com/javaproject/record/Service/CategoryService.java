@@ -6,4 +6,6 @@ import java.util.ArrayList;
 
 public interface CategoryService {
     ArrayList<Category> getCategoryByUserId(int userId);
+
+    void deleteCategoryById(int categoryId);
 }

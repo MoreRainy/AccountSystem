@@ -27,4 +27,14 @@ public class TransactionServiceImpl implements TransactionService {
 
         return transactionArrayList;
     }
+
+    /**
+     * 根据记录Id删除交易记录
+     *
+     * @param transactionId
+     */
+    @Override
+    public void deleteTransactionById(int transactionId) {
+        transactionMapper.deleteTransactionById(transactionId);
+    }
 }
