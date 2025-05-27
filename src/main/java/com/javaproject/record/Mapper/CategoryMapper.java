@@ -5,7 +5,6 @@ import org.apache.ibatis.annotations.*;
 
 import java.util.ArrayList;
 
-@Mapper
 public interface CategoryMapper {
     /**
      * 根据用户获取分类信息

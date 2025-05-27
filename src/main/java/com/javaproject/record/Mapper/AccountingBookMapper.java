@@ -8,7 +8,6 @@ import org.apache.ibatis.annotations.Select;
 
 import java.util.ArrayList;
 
-@Mapper
 public interface AccountingBookMapper {
     /**
      * 通过用户id获取所有账本

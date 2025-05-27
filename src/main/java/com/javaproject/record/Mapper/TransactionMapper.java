@@ -5,7 +5,6 @@ import org.apache.ibatis.annotations.*;
 
 import java.util.ArrayList;
 
-@Mapper
 public interface TransactionMapper {
 
     /**
